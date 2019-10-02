@@ -1,6 +1,6 @@
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
-from tutorial.spiders.receitas_spider import ReceitasSpider
+from receitas.spiders.receitas_spider import ReceitasSpider
 
 settings = get_project_settings()
 settings.set('FEED_FORMAT', 'csv')

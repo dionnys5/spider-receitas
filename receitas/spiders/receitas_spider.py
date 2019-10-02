@@ -16,7 +16,7 @@ class ReceitasSpider(scrapy.Spider):
     # Para testes sempre apagar a pasta criada definida em JOBDIR
     custom_settings = {
         'ITEM_PIPELINES': {
-            'tutorial.pipelines.TutorialPipeline': 400
+            'receitas.pipelines.ReceitasPipeline': 400
         },
         'LOG_FILE': 'tutorial.log',
         'FEED_FORMAT': 'csv',
@@ -29,7 +29,7 @@ class ReceitasSpider(scrapy.Spider):
         :param response: Que é o valor do conteúdo da página visitada a partir das start_urls
         :return: Objeto da classe TutorialItem que define a estrutura de dados coletados
         '''
-        item = TutorialItem()
+        item = ReceitasItem()
         for quote in response.css("div.quote"):
             item['quote'] = quote.css("span.text::text").get()
             item['autor'] = quote.css("small.author::text").get()
