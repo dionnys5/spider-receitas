@@ -18,5 +18,16 @@ def tokenizador(value):
 
 
 class ReceitasItem(scrapy.Item):
-    quote = scrapy.Field(serializer=tokenizador)
+    titulo = scrapy.Field()
+    dificuldade = scrapy.Field()
+    tempo = scrapy.Field()
+    rendimento = scrapy.Field()
+    ingredientes = scrapy.Field()
+    preparo = scrapy.Field()
     autor = scrapy.Field()
+    categoria = scrapy.Field()
+    metodo_preparo = scrapy.Field()
+    origem = scrapy.Field()
+    ocasioes = scrapy.Field()
+    informacoes = scrapy.Field()
+    calorias = scrapy.Field()
